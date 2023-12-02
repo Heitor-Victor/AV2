@@ -1,0 +1,12 @@
+<h1>Lista de tarefas</h1>
+<ul>
+  <li *ngFor="let atividade of listaDeTarefas; let i = index">
+    <div [ngClass]="{ check: atividade.concluido }">
+      {{ atividade.tarefa }}
+      <button (click)="deletarTarefa(i)">Deletar</button>
+      <button (click)="concluirTarefa(i)">Check</button>
+    </div>
+  </li>
+</ul>
+<input type="text" maxlength="100" #tarefa />
+<button (click)="adicionarTarefa(tarefa.value)">Adicionar</button>
