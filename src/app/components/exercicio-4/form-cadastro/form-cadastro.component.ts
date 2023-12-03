@@ -21,8 +21,12 @@ export class FormCadastroComponent {
       password: [''],
     });
   }
+  onInputChange(event: Event){
+    this.checkCampos = 0
+  }
   CadastrarUser(event: Event) {
-    if (this.CadastroForm.value.email !== '' && this.CadastroForm.value.password !== '' && this.CadastroForm.value.name !== '') {
+    
+    if ((this.CadastroForm.value.email !== ''&& this.CadastroForm.value.email !== null) && (this.CadastroForm.value.password !== ''&& this.CadastroForm.value.password !== null) && (this.CadastroForm.value.name !== ''&& this.CadastroForm.value.name !== null)) {
       const newUser: {
         name: string;
         email: string;
@@ -36,5 +40,6 @@ export class FormCadastroComponent {
     } else {
       this.checkCampos = 2;
     }
+    
   }
 }
