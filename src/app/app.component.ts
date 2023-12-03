@@ -5,13 +5,23 @@ import { ContadorComponentComponent } from './components/exercicio-1/contador-co
 import { ListItemsComponent } from './components/exercicio-2-e-3/list-items/list-items.component';
 import { FormCadastroComponent } from './components/exercicio-4/form-cadastro/form-cadastro.component';
 import { FormsModule, ReactiveFormsModule, FormBuilder } from '@angular/forms';
+import { ControleAcessoComponent } from './components/exercicio-5/controle-acesso/controle-acesso.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, ContadorComponentComponent, ListItemsComponent, FormCadastroComponent, ReactiveFormsModule, FormsModule],
+  imports: [
+    CommonModule,
+    RouterOutlet,
+    ContadorComponentComponent,
+    ListItemsComponent,
+    FormCadastroComponent,
+    ReactiveFormsModule,
+    FormsModule,
+    ControleAcessoComponent,
+  ],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   title = 'AV2';

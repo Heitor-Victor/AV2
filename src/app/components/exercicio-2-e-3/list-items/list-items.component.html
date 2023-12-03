@@ -3,8 +3,8 @@
   <li *ngFor="let atividade of listaDeTarefas; let i = index">
     <div [ngClass]="{ check: atividade.concluido }">
       {{ atividade.tarefa }}
-      <button (click)="deletarTarefa(i)">Deletar</button>
-      <button (click)="concluirTarefa(i)">Check</button>
+      <button style="background-color: rgb(248, 47, 47); margin: 5px;" (click)="deletarTarefa(i)" >Deletar</button>
+      <button style="background-color: rgb(6, 221, 6);" (click)="concluirTarefa(i)">Check</button>
     </div>
   </li>
 </ul>

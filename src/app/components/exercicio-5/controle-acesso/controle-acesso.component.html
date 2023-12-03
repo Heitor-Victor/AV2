@@ -1,0 +1,13 @@
+<h2>Controle de acesso</h2>
+<button (click)="atualizarAcesso(1)">Usuário</button>
+<button (click)="atualizarAcesso(2)">Colaborador</button>
+<button (click)="atualizarAcesso(3)">Administrador</button>
+<div *ngIf="controle == 1">
+  <p>Você tem permissão de usuário</p>
+</div>
+<div *ngIf="controle == 2">
+  <p>Você tem permissão de colaborador</p>
+</div>
+<div *ngIf="controle == 3">
+  <p>Você tem permissão de administrador</p>
+</div>
