@@ -1,0 +1,16 @@
+<p>form-cadastro works!</p>
+<div>
+  <h3>Cadastro</h3>
+  <form (submit)="CadastrarUser($event)" [formGroup]="CadastroForm">
+    <input formControlName="name" placeholder="Nome" />
+    <input formControlName="email" placeholder="Email" />
+    <input formControlName="password" placeholder="Senha" />
+    <button type="submit">Cadastrar</button>
+    <div *ngIf="checkCampos == 1" class="cadastroOK">
+      <h2>Olá,{{ userName }} , seu cadastro foi realizado com sucesso</h2>
+    </div>
+    <div *ngIf="checkCampos == 2; " class="cadastroNOK">
+      <h2>Olá, informe os campos corretamente.</h2>
+    </div>
+  </form>
+</div>
