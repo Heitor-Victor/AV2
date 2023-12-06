@@ -13,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { DadosAlunosComponent } from './components/exercício-8/dados-alunos/dados-alunos.component';
 import { provideHttpClient } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
+import { FormLoginComponent } from './components/exercicio-7/form-login/form-login.component';
+import { AreaLogadaComponent } from './components/exercicio-7/area-logada/area-logada.component';
 
 @Component({
   selector: 'app-root',
@@ -29,11 +31,9 @@ import { HttpClient } from '@angular/common/http';
     ControleAcessoComponent,
     ComponentePaiComponent,
     ComponenteFilhoComponent,
-    
-    
-    
+    FormLoginComponent,
     DadosAlunosComponent,
-    
+    AreaLogadaComponent,
   ],
   providers: [HttpClientModule],
   templateUrl: './app.component.html',
