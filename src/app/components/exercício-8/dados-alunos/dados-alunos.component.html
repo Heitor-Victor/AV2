@@ -1,0 +1,19 @@
+<p>dados-alunos works!</p>
+
+<!-- product-list.component.html -->
+<h2>Lista de alunos</h2>
+<div > 
+  <tr>
+    <th>Nome</th>
+    <th>Matrícula</th> 
+    <th>Curso</th> 
+    <th>Média Global</th>  
+</tr>
+<tr *ngFor="let aluno of alunos ">
+  <td>{{ aluno.nome }}</td>
+  <td>{{ aluno.matricula }}</td> 
+  <td>{{ aluno.curso }}</td> 
+  <td>{{ ((aluno.rendimentoEscolar["Back-end"] + aluno.rendimentoEscolar["Front-end"] + aluno.rendimentoEscolar["POO"])/3).toFixed(1) }}</td>   
+  </tr>
+</div>
+  

@@ -8,11 +8,17 @@ import { FormsModule, ReactiveFormsModule, FormBuilder } from '@angular/forms';
 import { ControleAcessoComponent } from './components/exercicio-5/controle-acesso/controle-acesso.component';
 import { ComponentePaiComponent } from './components/exercicio-6/componente-pai/componente-pai.component';
 import { ComponenteFilhoComponent } from './components/exercicio-6/componente-filho/componente-filho.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { DadosAlunosComponent } from './components/exercício-8/dados-alunos/dados-alunos.component';
+import { provideHttpClient } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
+    HttpClientModule,
     CommonModule,
     RouterOutlet,
     ContadorComponentComponent,
@@ -22,8 +28,14 @@ import { ComponenteFilhoComponent } from './components/exercicio-6/componente-fi
     FormsModule,
     ControleAcessoComponent,
     ComponentePaiComponent,
-    ComponenteFilhoComponent
+    ComponenteFilhoComponent,
+    
+    
+    
+    DadosAlunosComponent,
+    
   ],
+  providers: [HttpClientModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
